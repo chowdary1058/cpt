@@ -51,12 +51,49 @@ print(x[1:len(x)-1][::-1])'''
 b=0
 for i in range(1,x+1):
     b+=i
-print(b)'''
+print(b)
     
 x=int(input())
 b=0
 while x>0:
-    b += b
-    b -= 1
-print(b)
-    
+    b += x
+    x -= 1
+print(b)'''
+
+
+"""
+value error
+type error
+index error
+key error
+"""
+'''x=int(input())
+y=int(input())
+try:
+    print(x/y)
+except ZeroDivisionError as e:
+    print("ZeroDivisionError", e)
+except ValueError as e:
+    print("ValueError", e)
+finally:
+    print("finally block executed")'''
+'''for i in range(5):
+    print(i)
+    if i == 4:
+        break
+        print(i)
+    else:
+        print("done ")'''
+'''try:
+    a=int(input())
+    print(a)
+except ValueError as e:
+    print("ValueError", e)
+else:
+    print("no error")'''
+#to throw error 
+a=int(input())
+if a<0:
+    raise ValueError("a should be positive")
+else:
+    print(a)
